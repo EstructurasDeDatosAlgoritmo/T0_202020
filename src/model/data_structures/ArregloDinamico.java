@@ -18,7 +18,7 @@ import model.logic.Pelicula;
  * @author Fernando De la Rosa
  *
  */
-public class ArregloDinamico <T extends Comparable<T>> implements IArregloDinamico<T> {
+public class ArregloDinamico <T extends Comparable<T>> implements Lista<T> {
 
 
 
@@ -67,7 +67,7 @@ public class ArregloDinamico <T extends Comparable<T>> implements IArregloDinami
 
 	public T getElement(int i) {
 
-		return i < elementos.length && i >= 0? elementos[i]:null;
+		return i < tamanoAct && i >= 0? elementos[i]:null;
 	}
 
 	public T buscar(T dato) {
@@ -255,9 +255,7 @@ public class ArregloDinamico <T extends Comparable<T>> implements IArregloDinami
 		elementos[pos] = elem;
 	}
 
-<<<<<<< HEAD
 
-=======
 	public int darTamano() 
 	{
 		return tamanoAct;
@@ -269,8 +267,6 @@ public class ArregloDinamico <T extends Comparable<T>> implements IArregloDinami
 		return getElement(i);
 	}
 	 
->>>>>>> 876659cde7c95d2a2b46aa36ea28b9ebe197d4e1
-
 }
 
 

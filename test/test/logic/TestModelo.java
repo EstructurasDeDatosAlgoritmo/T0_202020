@@ -18,9 +18,7 @@ public class TestModelo {
 	}
 
 	public void setUp2() {
-		for(int i =0; i< CAPACIDAD;i++){
-			modelo.agregar(""+i);
-		}
+	
 	}
 
 	@Test
@@ -45,15 +43,15 @@ public class TestModelo {
 	@Test
 	public void testBuscar() {
 		setUp2();
-		assertNotNull(modelo.buscar(""+50));// Modelo con el 50 elementos presentes.
+		assertNotNull(modelo.buscar(50));// Modelo con el 50 elementos presentes.
 	}
 
 	@Test
 	public void testEliminar() {
 		setUp2();
 		assertTrue(modelo.darTamano() == CAPACIDAD);// Modelo con 100 elementos presentes.
-		assertTrue(modelo.eliminar(""+50).equals( ""+(50)));// Modelo con 99 elementos presentes, eliminando el 50.
-		assertNull(modelo.buscar(""+50));// Modelo con 99 elementos presentes.
+		assertTrue(modelo.eliminar(50).equals( ""+(50)));// Modelo con 99 elementos presentes, eliminando el 50.
+		assertNull(modelo.buscar(50));// Modelo con 99 elementos presentes.
 	}
 
 }
